@@ -1,0 +1,14 @@
+/* Minimal custom styling to ensure it looks decent but simple */
+.content-padding {
+    padding: 15px;
+}
+
+/* Ensure images and inputs fit well */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+}

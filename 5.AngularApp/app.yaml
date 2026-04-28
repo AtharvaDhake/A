@@ -1,0 +1,12 @@
+runtime: python39
+
+handlers:
+  # Serve static files for the Angular app
+  - url: /(.*\.(js|css|png|jpg|ico|woff|woff2|ttf|svg))$
+    static_files: dist/my-app/browser/\1
+    upload: dist/my-app/browser/.*\.(js|css|png|jpg|ico|woff|woff2|ttf|svg)$
+
+  # Serve index.html for all other routes to support Angular routing
+  - url: /.*
+    static_files: dist/my-app/browser/index.html
+    upload: dist/my-app/browser/index.html

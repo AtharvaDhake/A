@@ -1,0 +1,12 @@
+<div class="auth-container profile-container">
+  <h2>User Profile</h2>
+  <div *ngIf="user" class="profile-details">
+    <div class="detail-row">
+      <strong>Name:</strong> <span>{{ user.name }}</span>
+    </div>
+    <div class="detail-row">
+      <strong>Email:</strong> <span>{{ user.email }}</span>
+    </div>
+    <button (click)="logout()" class="logout-btn">Logout</button>
+  </div>
+</div>

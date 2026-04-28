@@ -1,0 +1,28 @@
+To view your dashboard on your Ubuntu 22.04 VM, follow these simple steps using the built-in Python server method. This is the easiest way to "display" the output from your Windows host onto the VM.
+
+Step 1: Start a Server on Windows
+Open a terminal (PowerShell or Command Prompt) on your Windows machine.
+Navigate to your project folder:
+powershell
+cd "C:\Users\athar\OneDrive\Desktop\1.HTML,CSS"
+Start the Python web server:
+bash
+python -m http.server 8000
+(Keep this terminal open while you are viewing the page.)
+Step 2: Find your Windows IP Address
+Open another terminal on Windows.
+Type ipconfig and press Enter.
+Look for the IPv4 Address under your active network adapter (e.g., 192.168.1.15).
+Step 3: View on Ubuntu VM
+Open the browser (like Firefox) inside your Ubuntu 22.04 VM.
+In the address bar, type your Windows IP followed by the port: http://<YOUR_WINDOWS_IP>:8000/dashboard.html Example: http://192.168.1.15:8000/dashboard.html
+Alternative: Copy the file to Ubuntu (If you want the file stored on the VM)
+If you prefer to have the code physically on the Ubuntu filesystem, run this command inside your Ubuntu terminal:
+
+bash
+# Replace <WINDOWS_IP> with your actual IP from Step 2
+wget http://<WINDOWS_IP>:8000/dashboard.html
+Then you can just open it locally in Ubuntu:
+
+bash
+firefox dashboard.html
