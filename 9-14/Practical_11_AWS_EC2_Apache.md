@@ -3,6 +3,19 @@
 ## Objective
 To launch a Linux instance on AWS and configure it as a web server using Apache.
 
+## Theory
+### What is Apache?
+Apache HTTP Server (commonly referred to as Apache) is a free, open-source cross-platform web server software. It is one of the most popular web servers in the world and is responsible for serving website content to users over the internet.
+
+### How does it work?
+When a user types a URL (like `http://your-ec2-ip`) into their browser, the browser sends an HTTP request to the server. Apache is the software running on the server that listens for these requests (by default on Port 80 for HTTP). Once it receives a request, Apache locates the requested file (like `index.html`), reads it, and sends it back to the user's browser to be displayed.
+
+### Key Concepts in this Practical:
+- **EC2 (Elastic Compute Cloud):** A virtual server provided by AWS where we host our application.
+- **Web Server:** Software (like Apache) that delivers web content to clients (browsers) over the internet.
+- **Port 80 / HTTP:** The standard communication channel for unencrypted web traffic.
+- **`/var/www/html/`:** The default "document root" directory for Apache on Linux. When a user visits your IP, Apache looks in this folder for the files to serve.
+
 ## Step-by-Step Procedure
 
 ### Step 1: Launch EC2 Instance

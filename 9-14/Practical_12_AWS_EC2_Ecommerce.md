@@ -47,9 +47,9 @@ To deploy a static ecommerce website on an Ubuntu EC2 instance using a template 
    sudo unzip space-science.zip
    ```
 5. Move the files from the unzipped folder to the current directory:
-   *Note: Check the folder name first using `ls`. If it's `space-science`, run:*
+   *Note: Check the folder name first using `ls`. For this template, the actual website files are inside an `upload` subfolder, so run:*
    ```bash
-   sudo mv space-science/* .
+   sudo mv space-science/upload/* .
    ```
 6. (Optional) Set correct permissions:
    ```bash
