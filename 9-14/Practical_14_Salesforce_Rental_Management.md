@@ -49,16 +49,33 @@ Go to **Fields & Relationships** and click **New** for each field:
 ---
 
 ### Step 3: Create Custom Object "Tenant" (API Name: Tenant__c)
-1. **Object Manager** > **Create** > **Custom Object**.
-2. **Label:** Tenant | **Plural:** Tenants.
-3. **Record Name:** Tenant Name (Data Type: Text).
-4. Click **Save**.
+1. In Object Manager, click **Create** > **Custom Object**.
+2. **Label:** Tenant
+3. **Plural Label:** Tenants
+4. **Object Name:** Tenant
+5. **Record Name:** Tenant Name (Data Type: Text)
+6. Under **Optional Features**, check:
+   - [x] Allow Reports
+   - [x] Allow Activities
+   - [x] Track Field History
+7. Click **Save**.
 
 #### Add Fields to Tenant Object:
-1. **Tenant ID**: Type: **Auto Number** | Format: `TEN-{0000}`.
-2. **Phone Number**: Type: **Phone** | Label: Phone Number.
-3. **Email**: Type: **Email** | Label: Email.
-4. **Move In Date**: Type: **Date** | Label: Move In Date.
+Go to **Fields & Relationships** and click **New** for each field:
+1. **Tenant ID**:
+   - Type: **Auto Number**
+   - Field Label: Tenant ID
+   - Display Format: `TEN-{0000}`
+   - Starting Number: `1`
+2. **Phone Number**:
+   - Type: **Phone**
+   - Field Label: Phone Number
+3. **Email**:
+   - Type: **Email**
+   - Field Label: Email
+4. **Move In Date**:
+   - Type: **Date**
+   - Field Label: Move In Date
 
 ---
 

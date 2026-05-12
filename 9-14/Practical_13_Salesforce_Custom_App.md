@@ -22,8 +22,12 @@ To understand the Salesforce Lightning interface by designing and developing a c
    - **Plural Label:** `Students`
    - **Object Name:** `Student` (Auto-filled)
    - **Record Name:** `Student Name` (Data Type: **Text**)
-5. Under **Deployment Status**, ensure **Deployed** is selected.
-6. Click **Save**.
+5. Under **Optional Features**, check:
+   - [x] Allow Reports
+   - [x] Allow Activities
+   - [x] Track Field History
+6. Under **Deployment Status**, ensure **Deployed** is selected.
+7. Click **Save**.
 
 ---
 
@@ -31,14 +35,14 @@ To understand the Salesforce Lightning interface by designing and developing a c
 1. After saving, you will be in the **Student** object settings. Click **Fields & Relationships** from the left sidebar.
 2. Click **New**.
 3. **Add Department Field**:
-   - Select **Text** > Click **Next**.
+   - Select Data Type: **Text** and click **Next**.
    - Field Label: `Department`
    - Length: `50`
-   - Click **Next** > **Next** > **Save & New**.
+   - Click **Next** (Field-Level Security) > **Next** (Page Layout) > **Save & New**.
 4. **Add Student Email Field**:
-   - Select **Email** > Click **Next**.
+   - Select Data Type: **Email** and click **Next**.
    - Field Label: `Student Email`
-   - Click **Next** > **Next** > **Save**.
+   - Click **Next** (Field-Level Security) > **Next** (Page Layout) > **Save**.
 
 ---
 
