@@ -22,7 +22,9 @@ The main objective of this project is to manage rental property details and tena
    - [x] Allow Reports
    - [x] Allow Activities
    - [x] Track Field History
-7. Click **Save**.
+7. At the very bottom under **Object Creation Options**, check **Launch New Custom Tab Wizard after saving this custom object**.
+8. Click **Save**.
+9. Choose a **Tab Style** (any icon), click **Next** > **Next** > **Save**.
 
 #### Add Fields to Property Object:
 Go to **Fields & Relationships** and click **New** for each field:
@@ -34,7 +36,7 @@ Go to **Fields & Relationships** and click **New** for each field:
 2. **Property Type**:
    - Type: **Picklist**
    - Field Label: Property Type
-   - Values (Enter manually): `House`, `Flat`, `Studio`, `Commercial`
+   - Values (Enter manually): `House`, `Flat`, `Studio`, `Commercial` *(Enter each on a new line!)*
 3. **Address**:
    - Type: **Text Area**
    - Field Label: Address
@@ -44,7 +46,7 @@ Go to **Fields & Relationships** and click **New** for each field:
 5. **Status**:
    - Type: **Picklist**
    - Field Label: Status
-   - Values: `Available`, `Rented`
+   - Values: `Available`, `Rented` *(Enter each on a new line!)*
 
 ---
 
@@ -58,7 +60,9 @@ Go to **Fields & Relationships** and click **New** for each field:
    - [x] Allow Reports
    - [x] Allow Activities
    - [x] Track Field History
-7. Click **Save**.
+7. At the very bottom under **Object Creation Options**, check **Launch New Custom Tab Wizard after saving this custom object**.
+8. Click **Save**.
+9. Choose a **Tab Style** (any icon), click **Next** > **Next** > **Save**.
 
 #### Add Fields to Tenant Object:
 Go to **Fields & Relationships** and click **New** for each field:
@@ -102,12 +106,13 @@ Go to **Fields & Relationships** and click **New** for each field:
 ### Step 5: Creating Reports (Detailed)
 1. Click the **App Launcher** (9 dots icon) and search for **Reports**.
 2. Click **New Report**.
-3. Select **Properties** as the report type (you may need to search for it).
+3. Select **Properties** as the report type (make sure "All" is selected on the left panel, not "Recently Used").
 4. **Available Properties Report**:
    - Go to the **Filters** tab.
    - Click **Add Filter** > Select **Status**.
    - Operator: `equals` | Value: `Available`.
    - Click **Apply**.
+   - **Crucial step for Dashboards:** Go to the **Outline** tab (next to Filters). Under **Group Rows**, search for and add **Status**.
    - Click **Save & Run**. Name it "Available Properties Report".
 5. **Rented Properties Report**:
    - Click **New Report** from the Reports tab.
@@ -116,11 +121,13 @@ Go to **Fields & Relationships** and click **New** for each field:
    - Click **Add Filter** > Select **Status**.
    - Operator: `equals` | Value: `Rented`.
    - Click **Apply**.
+   - **Crucial step for Dashboards:** Go to the **Outline** tab (next to Filters). Under **Group Rows**, search for and add **Property Type** (this lets you make a pie chart of flats vs houses).
    - Click **Save & Run**. Name it "Rented Properties Report".
 6. **Tenant Details Report**:
    - Click **New Report** from the Reports tab.
-   - Select **Tenants** as the report type.
+   - Select **Tenants** as the report type (make sure "All" is selected on the left panel).
    - (Optional) Add fields like Tenant ID, Name, Phone Number, and Property to the Outline.
+   - **Crucial step for Dashboards:** Under **Group Rows**, search for and add **Property**.
    - Click **Save & Run**. Name it "Tenant Details Report".
 
 ---
@@ -129,19 +136,24 @@ Go to **Fields & Relationships** and click **New** for each field:
 1. Click **App Launcher** > **Dashboards**.
 2. Click **New Dashboard**, name it **Rental Management Dashboard**, and click **Create**.
 3. **Total Properties Component**:
-   - Click **+ Component**.
+   - Click **+ Widget** (or + Component) > **Chart or Table**.
    - Select your "Available Properties Report" (or a general properties report).
    - Select the **Metric Chart** type (displays a single large number).
    - Click **Add**.
-4. **Available Houses Component**:
-   - Click **+ Component**.
+4. **Total Tenants Component**:
+   - Click **+ Widget** > **Chart or Table**.
+   - Select your "Tenant Details Report".
+   - Select the **Metric Chart** type.
+   - Click **Add**.
+5. **Available Houses Component**:
+   - Click **+ Widget** > **Chart or Table**.
    - Select your "Available Properties Report".
    - Select the **Gauge Chart** type.
    - Click **Add**.
-5. **Occupied Houses Component**:
-   - Click **+ Component**.
+6. **Occupied Houses Component**:
+   - Click **+ Widget** > **Chart or Table**.
    - Select your "Rented Properties Report".
-   - Select the **Pie Chart** type.
+   - Select the **Donut Chart** type (first icon on the second row).
    - Click **Add**.
 6. Click **Save** and then **Done**.
 

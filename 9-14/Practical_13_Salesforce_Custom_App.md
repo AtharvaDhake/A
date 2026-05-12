@@ -27,7 +27,9 @@ To understand the Salesforce Lightning interface by designing and developing a c
    - [x] Allow Activities
    - [x] Track Field History
 6. Under **Deployment Status**, ensure **Deployed** is selected.
-7. Click **Save**.
+7. At the very bottom under **Object Creation Options**, check **Launch New Custom Tab Wizard after saving this custom object**.
+8. Click **Save**.
+9. Choose a **Tab Style** (any icon), click **Next** > **Next** > **Save**.
 
 ---
 
@@ -56,7 +58,7 @@ To understand the Salesforce Lightning interface by designing and developing a c
    - Description: `App to manage college student records.`
    - Click **Next**.
 5. **App Options**: Leave as default and click **Next**.
-6. **Service Setup**: Leave as default and click **Next**.
+6. **Utility Items**: Leave as default and click **Next**.
 7. **Navigation Items**:
    - Find **Students** in the "Available Items" list.
    - Click the **Right Arrow** to move it to "Selected Items".
