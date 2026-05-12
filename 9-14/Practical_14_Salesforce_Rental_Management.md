@@ -81,11 +81,21 @@ Go to **Fields & Relationships** and click **New** for each field:
 
 ### Step 4: Create 1:Many Relationship (Lookup)
 *This allows one property to have multiple tenants.*
-1. In the **Tenant** object, go to **Fields & Relationships** > **New**.
+1. In the **Tenant** object, go to **Fields & Relationships** and click **New**.
 2. Select **Lookup Relationship** and click **Next**.
-3. Related To: Select **Property** from the dropdown.
-4. Field Label: **Property** | Field Name: `Property`.
-5. Click **Next** through the visibility and page layout screens, then click **Save**.
+3. **Related To**:
+   - Select **Property** from the dropdown.
+   - Click **Next**.
+4. **Field Details**:
+   - Field Label: Property
+   - Field Name: Property
+   - Click **Next**.
+5. **Field-Level Security**:
+   - Leave defaults and click **Next**.
+6. **Page Layouts**:
+   - Leave defaults and click **Next**.
+7. **Related Lists**:
+   - Leave defaults and click **Save**.
 
 ---
 
@@ -100,30 +110,61 @@ Go to **Fields & Relationships** and click **New** for each field:
    - Click **Apply**.
    - Click **Save & Run**. Name it "Available Properties Report".
 5. **Rented Properties Report**:
-   - Repeat the steps but filter where **Status** equals `Rented`.
+   - Click **New Report** from the Reports tab.
+   - Select **Properties** as the report type.
+   - Go to the **Filters** tab.
+   - Click **Add Filter** > Select **Status**.
+   - Operator: `equals` | Value: `Rented`.
+   - Click **Apply**.
+   - Click **Save & Run**. Name it "Rented Properties Report".
 6. **Tenant Details Report**:
-   - Create a new report using **Tenants** as the report type.
+   - Click **New Report** from the Reports tab.
+   - Select **Tenants** as the report type.
+   - (Optional) Add fields like Tenant ID, Name, Phone Number, and Property to the Outline.
+   - Click **Save & Run**. Name it "Tenant Details Report".
 
 ---
 
 ### Step 6: Creating Dashboard Components
 1. Click **App Launcher** > **Dashboards**.
-2. Click **New Dashboard**. Name: **Rental Management Dashboard**.
-3. Click **+ Component**:
-   - **Total Properties**: Use the Properties report and select the "Metric Chart" (big number).
-   - **Available Houses**: Use the "Available Properties Report" and select a "Gauge Chart".
-   - **Occupied Houses**: Use the "Rented Properties Report" and select a "Pie Chart".
-4. Click **Save** and then **Done**.
+2. Click **New Dashboard**, name it **Rental Management Dashboard**, and click **Create**.
+3. **Total Properties Component**:
+   - Click **+ Component**.
+   - Select your "Available Properties Report" (or a general properties report).
+   - Select the **Metric Chart** type (displays a single large number).
+   - Click **Add**.
+4. **Available Houses Component**:
+   - Click **+ Component**.
+   - Select your "Available Properties Report".
+   - Select the **Gauge Chart** type.
+   - Click **Add**.
+5. **Occupied Houses Component**:
+   - Click **+ Component**.
+   - Select your "Rented Properties Report".
+   - Select the **Pie Chart** type.
+   - Click **Add**.
+6. Click **Save** and then **Done**.
 
 ---
 
 ### Step 7: Final App Creation
-1. Go to **Setup** > search for **App Manager**.
-2. Click **New Lightning App**.
-3. **App Details**: Name: `Rental Management System`.
-4. **Navigation Items**: Add **Properties**, **Tenants**, **Reports**, and **Dashboards**.
-5. **User Profiles**: Add **System Administrator**.
-6. **Save & Finish**.
+1. Go to **Setup** > in the Quick Find box, search for and click on **App Manager**.
+2. Click **New Lightning App** (top right).
+3. **App Details & Branding**:
+   - App Name: `Rental Management System`
+   - Click **Next**.
+4. **App Options**: Leave as default and click **Next**.
+5. **Utility Items**: Leave as default and click **Next**.
+6. **Navigation Items**:
+   - Search for and add the following to "Selected Items":
+     - **Properties**
+     - **Tenants**
+     - **Reports**
+     - **Dashboards**
+   - Click **Next**.
+7. **User Profiles**:
+   - Search for **System Administrator** and add it to "Selected Profiles".
+   - Click **Save & Finish**.
 
 ---
 
